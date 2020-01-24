@@ -84,4 +84,4 @@ try:
 	else:
 		print(f"{merah}[!] Masukkan Pilihan Yang Benar!!")
 except ConnectionError:
-	print(f'{merah}[!]{reset} Periksa Koneksi Internet Anda!!\n{merah}[!]{reset} Pastikan Anda Menggunakan vpn!!')
+	print(f'{merah}[!]{reset} Periksa Koneksi Internet Anda!!\n{merah}[!]{reset}Pastikan Anda Menggunakan vpn!!')
