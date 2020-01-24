@@ -36,50 +36,52 @@ def link():
 		print(f'{reset}[!]{hijau} Silahkan Copy linknya dan pastekan di browser anda!\n')
 		nol += 1
 ##################################################
-
-a = get(url,headers=ua).text
-b = bs(a,'html.parser')
-c = b.findAll('div',attrs={'class':'eropost'})
-co = 0
-for x in range(0,len(c)):
-	d = c[co].find('a')
-	print(f"{hijau}[{co}{reset}]"+d.text)
-	co += 1
+try:
+	a = get(url,headers=ua).text
+	b = bs(a,'html.parser')
+	c = b.findAll('div',attrs={'class':'eropost'})
+	co = 0
+	for x in range(0,len(c)):
+		d = c[co].find('a')
+		print(f"{hijau}[{co}{reset}]"+d.text)
+		co += 1
 ###################################################
-aa = get(url,headers=ua).text
-bb = bs(aa,'html.parser')
-cc = bb.findAll('div',attrs={'class':'eropost'})
+	aa = get(url,headers=ua).text
+	bb = bs(aa,'html.parser')
+	cc = bb.findAll('div',attrs={'class':'eropost'})
 
-an = input(f'[{hijau}>{reset}] Masukkan Pilihan: ')
-if an == '0':
-	dd = cc[0].find('a')
-	link()
-elif an == '1':
-	dd = cc[1].find('a')
-	link()
-elif an == '2':
-	dd = cc[2].find('a')
-	link()
-elif an == '3':
-	dd = cc[3].find('a')
-	link()
-elif an == '4':
-	dd = cc[4].find('a')
-	link()
-elif an == '5':
-	dd = cc[5].find('a')
-	link()
-elif an == '6':
-	dd = cc[6].find('a')
-	link()
-elif an == '7':
-	dd = cc[7].find('a')
-	link()
-elif an == '8':
-	dd = cc[8].find('a')
-	link()
-elif an == '9':
-	dd = cc[9].find('a')
-	link()
-else:
-	print(f"{merah}[!] Masukkan Pilihan Yang Benar!!")
+	an = input(f'[{hijau}>{reset}] Masukkan Pilihan: ')
+	if an == '0':
+		dd = cc[0].find('a')
+		link()
+	elif an == '1':
+		dd = cc[1].find('a')
+		link()
+	elif an == '2':
+		dd = cc[2].find('a')
+		link()
+	elif an == '3':
+		dd = cc[3].find('a')
+		link()
+	elif an == '4':
+		dd = cc[4].find('a')
+		link()
+	elif an == '5':
+		dd = cc[5].find('a')
+		link()
+	elif an == '6':
+		dd = cc[6].find('a')
+		link()
+	elif an == '7':
+		dd = cc[7].find('a')
+		link()
+	elif an == '8':
+		dd = cc[8].find('a')
+		link()
+	elif an == '9':
+		dd = cc[9].find('a')
+		link()
+	else:
+		print(f"{merah}[!] Masukkan Pilihan Yang Benar!!")
+except ConnectionError:
+	print(f'{merah}[!]{reset} Periksa Koneksi Internet Anda!!\n{merah}[!]{reset}Pastikan Anda Menggunakan vpn!!')
