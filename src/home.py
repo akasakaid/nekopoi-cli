@@ -43,7 +43,7 @@ try:
 	co = 0
 	for x in range(0,len(c)):
 		d = c[co].find('a')
-		print(f"{hijau}[{co}{hijau}]"+d.text)
+		print(f"{hijau}[{co}{hijau}]{reset}"+d.text)
 		co += 1
 ###################################################
 	aa = get(url,headers=ua).text
