@@ -13,7 +13,7 @@ try:
 except:
 	print('Please install requirements.txt')
 	sys.exit()
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 def menu():
 	print(f"""{hijau}
   _   _      _         _____      _ {magenta}   _____ _      _____ {hijau}
