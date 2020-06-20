@@ -16,7 +16,7 @@ try:
 	reset = fore.RESET
 	r = Session()
 except ImportError:
-	exit('Please install requirements.txt')
+	sys.exit('Please install requirements.txt')
 
 
 def menu():
@@ -67,15 +67,15 @@ def rumah(url,proxy):
 					menu()
 					rumah(url,proxy)
 					break
-				elif pil == 99 or pil == 9:exit(f'\n{merah}bye bye ^_^')
+				elif pil == 99 or pil == 9:sys.exit(f'\n{merah}bye bye ^_^')
 				else:
 					link = d[pil-1].find('a')
 					dl(link['href'],proxy)
 					break
 			except ValueError:continue
 			except IndexError:continue
-	except KeyboardInterrupt:exit(f'\n{merah}bye bye ^-^')
-	except ConnectionError:exit(f'\nno internet, please check your connection ^-^')
+	except KeyboardInterrupt:sys.exit(f'\n{merah}bye bye ^-^')
+	except ConnectionError:sys.exit(f'\nno internet, please check your connection ^-^')
 
 def cari(url,proxy):
 	try:
@@ -101,8 +101,7 @@ def cari(url,proxy):
 					cari(url,proxy)
 					break
 				elif pil == 99:
-					break
-					exit(f'\n{merah}bye bye ^-^')
+					sys.exit(f'\n{merah}bye bye ^-^')
 				else:
 					g = c[pil-1].find('h2').find('a')['href']
 					if '/hentai/' in g:
@@ -112,7 +111,7 @@ def cari(url,proxy):
 					break
 			except IndexError:continue
 			except ValueError:continue
-	except KeyboardInterrupt:exit(f'{merah}\nbye bye ^-^')
+	except KeyboardInterrupt:sys.exit(f'{merah}\nbye bye ^-^')
 if __name__ == "__main__":
 	menu()
 	while True:
@@ -140,4 +139,4 @@ if __name__ == "__main__":
 				except ValueError:continue
 		except ConnectionError:print(f'failed to connect nekopoi.care',flush=True,end='\r')
 		except HTTPError or SSLError:print(f'failed to connect nekopoi.care',flush=True,end='\r')
-		except KeyboardInterrupt:exit()
+		except KeyboardInterrupt:sys.exit()
