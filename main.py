@@ -21,7 +21,7 @@ except ImportError:
 
 def menu():
 	os.system('cls' if os.name == 'nt' else 'clear')
-	print(f"""{magenta}    _   __     __                     _ 
+	print(f"""{magenta}    _   __     __                     {merah}_{magenta} 
    / | / /__  / /______  {hijau}____  ____  {merah}(_){magenta}
   /  |/ / _ \/ //_/ __ \{hijau}/ __ \/ __ \/ / {magenta}
  / /|  /  __/ ,< / /_/ {hijau}/ /_/ / /_/ / /  {magenta}
