@@ -2,17 +2,20 @@ try:
 	import os
 	from requests import *
 	from bs4 import BeautifulSoup as bs
-	from colorama import Fore,Style, init as jancok
-	jancok(autoreset=True)
-	merah = Fore.RED+Style.BRIGHT
-	kuning = Fore.YELLOW+Style.BRIGHT
-	hijau = Fore.GREEN+Style.BRIGHT
-	biru = Fore.BLUE+Style.BRIGHT
-	magenta = Fore.MAGENTA+Style.BRIGHT
-	reset = Fore.RESET
-except:
-	print('Please install requirements.txt')
-	sys.exit()
+	from colorama import Fore as fore, init
+	init(autoreset=True)
+	merah = fore.LIGHTRED_EX
+	kuning = fore.LIGHTYELLOW_EX
+	hijau = fore.LIGHTGREEN_EX
+	biru = fore.LIGHTBLUE_EX
+	magenta = fore.LIGHTMAGENTA_EX
+	cyan = fore.LIGHTCYAN_EX
+	hitam = fore.LIGHTBLACK_EX
+	putih = fore.LIGHTWHITE_EX
+	reset = fore.RESET
+except ImportError:
+	exit('Please install requirements.txt')
+
 
 
 url = 'http://nekopoi.care'
