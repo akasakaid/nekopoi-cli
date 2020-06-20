@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+#-*- coding: utf-8 -*-
+# coded AkasakaID
+# time : 20/06/2020
+
 import sys,os,time,random
 try:
 	from requests import Session
@@ -27,7 +32,7 @@ def menu():
  / /|  /  __/ ,< / /_/ {hijau}/ /_/ / /_/ / /  {magenta}
 /_/ |_/\___/_/|_|\____{hijau}/ .___/\____/_/   {magenta}
                      {hijau}/_/                {reset}
-{putih}[{hijau}+{putih}]{hijau} coded {putih}AkasakaID
+{putih}[{hijau}+{putih}]{hijau} coded {putih}AkasakaID {merah}| {putih}Black Coder Crush 
 {putih}[{hijau}+{putih}] {cyan}nekopoi cli version
 """)
 ua = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'}
@@ -137,6 +142,7 @@ if __name__ == "__main__":
 						break
 					else:print(f'{merah}masukan pilihan yang benar')
 				except ValueError:continue
+			break
 		except ConnectionError:print(f'failed to connect nekopoi.care',flush=True,end='\r')
 		except HTTPError or SSLError:print(f'failed to connect nekopoi.care',flush=True,end='\r')
 		except KeyboardInterrupt:sys.exit()
